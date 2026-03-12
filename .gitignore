@@ -1,2 +1,12 @@
 # Virtual environment
 .venv/
+
+# Data files
+data/
+
+# YOLO
+runs/
+yolo26n.pt
+
+# Cache
+__pycache__/
