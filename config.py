@@ -4,7 +4,7 @@ from pathlib import Path
 
 # -----
 
-PROJECT_DIR = "runs/detect/runs_pcb"
+PROJECT_DIR = "runs/detect"
 EXPERIMENT_NAME = "yolo_pcb_detection"
 DATA_YAML = "data/data.yaml"
-MODEL_PATH = Path(PROJECT_DIR) / EXPERIMENT_NAME / "weights" / "best.pt"
+MODEL_PATH = Path(PROJECT_DIR) / "runs_pcb" / EXPERIMENT_NAME / "weights" / "best.pt"
