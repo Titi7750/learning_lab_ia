@@ -9,17 +9,14 @@ from training.validate import validate_model
 def main() -> None:
     """ Main function to train and validate the YOLO model on the PCB dataset """
 
-    # Train the model
-    print("Training model...")
+    print("\n--- Training model ---")
     train_model()
 
-    # Validate the model
-    print("Validating model...")
+    print("\n--- Validating model ---")
     validate_model()
 
-    # Example prediction on a new image (uncomment and provide path to use)
-    # print("Running inference...")
-    # predict_image("path/to/new/image.jpg")
+    print("\n--- Running inference ---")
+    predict_image("data/test/images/")
 
     return None
 

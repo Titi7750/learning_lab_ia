@@ -13,10 +13,7 @@ def validate_model() -> None:
 
     # Validate the model on the PCB dataset
     model = YOLO(str(MODEL_PATH))
-    metrics = model.val(
-        data=DATA_YAML,
-        conf=0.25
-    )
+    metrics = model.val(data=DATA_YAML)
 
     print("Validation completed.")
     print(metrics)

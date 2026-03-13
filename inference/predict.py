@@ -21,8 +21,9 @@ def predict_image(param_image_path: str) -> None:
     # Run inference on the input image
     model = YOLO(str(MODEL_PATH))
     results = model.predict(
-        source=str(param_image_path),
-        conf=0.25
+        source=str(image_path_obj),
+        conf=0.4,
+        save=True
     )
 
     # Display results

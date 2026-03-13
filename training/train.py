@@ -13,12 +13,14 @@ def train_model() -> None:
     model = YOLO("yolo26n.pt")
     device = 0 if torch.cuda.is_available() else "cpu"
 
+    print(f"Using device: {device}")
+
     # Train the model on the PCB dataset
     model.train(
         data=DATA_YAML,       # path to dataset config file
         epochs=50,            # number of epochs
-        imgsz=640,            # image size
-        batch=8,              # batch size
+        imgsz=1024,           # image size
+        batch=4,              # batch size
         device=device,        # "cpu" or "0" for GPU
         workers=0,            # number of data loading workers
         cache=False,          # cache images for faster training (set to True if you have enough RAM)
