@@ -6,8 +6,6 @@ data/
 
 # YOLO
 yolo26n.pt
-best.pt
-last.pt
 
 # Cache
 __pycache__/
