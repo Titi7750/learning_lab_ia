@@ -1,24 +1,17 @@
-""" Main entry point for training and validating the YOLO model - Python 3.11.9 """
+""" Main entry point to launch the Streamlit diagnostic interface """
 
-from training.train import train_model
-from inference.predict import predict_image
-from training.validate import validate_model
+import sys
+import subprocess
+from pathlib import Path
 
 # -----
 
 def main() -> None:
-    """ Main function to train and validate the YOLO model on the PCB dataset """
+    """ Launch Streamlit UI from the project root """
 
-    print("\n--- Training model ---")
-    train_model()
-
-    print("\n--- Validating model ---")
-    validate_model()
-
-    print("\n--- Running inference ---")
-    predict_image("data/test/images/")
-
-    return None
+    app_path = Path(__file__).resolve().parent / "streamlit_app" / "app.py"
+    command = [sys.executable, "-m", "streamlit", "run", str(app_path)]
+    subprocess.run(command, check=True)
 
 # -----
 
